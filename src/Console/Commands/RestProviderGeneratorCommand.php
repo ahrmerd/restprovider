@@ -50,9 +50,9 @@ class RestProviderGeneratorCommand extends Command
         // dump($this->data);
         $modelName = $this->data['name'];
         $MigrationName = strtolower(Str::plural($modelName));
-        // $this->exportDataToJson();
-        // $this->createMigration($MigrationName);
-        // $this->createModel($modelName);
+        $this->exportDataToJson();
+        $this->createMigration($MigrationName);
+        $this->createModel($modelName);
         $this->createPolicy($modelName);
         $this->createController($modelName);
         return Command::SUCCESS;
@@ -199,12 +199,12 @@ class RestProviderGeneratorCommand extends Command
     }
     public function exportDataToJson()
     {
-        file_put_contents(__DIR__ . '/test.json', json_encode($this->data));
+        file_put_contents(app_path() . "/{$this->data['name']}.json", json_encode($this->data));
     }
 
     public function importDataFromJson()
     {
-        $this->data = json_decode(file_get_contents(__DIR__ . '/test.json'), true);
+        $this->data = json_decode(file_get_contents(app_path() . "/{$this->data['name']}.json"), true);
     }
     public function askBoolean(string $question, $comparVal = 'y')
     {
