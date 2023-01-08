@@ -36,7 +36,7 @@ class RestProviderGeneratorCommand extends Command
 
     protected function configure()
     {
-        $this->addOption('file', 'f', InputOption::VALUE_NONE, 'The name of the table to create');
+        $this->addOption('file', 'f', InputOption::VALUE_REQUIRED, 'The name of the table to create');
 
     }
 
@@ -204,7 +204,8 @@ class RestProviderGeneratorCommand extends Command
 
     public function importDataFromJson()
     {
-        $this->data = json_decode(file_get_contents(app_path() . "/{$this->data['name']}.json"), true);
+        $filename = $this->option('file');
+        $this->data = json_decode(file_get_contents(app_path() . "/$filename.json"), true);
     }
     public function askBoolean(string $question, $comparVal = 'y')
     {
