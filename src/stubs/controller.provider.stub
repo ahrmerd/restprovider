@@ -1,0 +1,46 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+use {{ rootNamespace }}Http\Controllers\Controller;
+use {{ namespacedRequests }}
+use Spatie\QueryBuilder\AllowedFilter;
+use App\Http\Actions\RestProviderControllerActions;
+
+class {{ class }} extends Controller
+{
+    protected RestProviderControllerActions $actions;
+    
+    public function __construct(){
+        $this->actions = new RestProviderControllerActions({{ model }}::class, {{ includes }}, {{ filters }}, {{ sorts }});
+        $this->authorizeResource({{ model }}::class, '{{ modellower }}');
+    }
+
+    public function index()
+    {
+        return $this->actions->index();
+    }
+
+    public function store({{ storeRequest }} $request)
+    {
+        return {{ model }}::create($request->validated());
+    }
+
+
+    public function show({{ model }} ${{ modelVariable }})
+    {
+        return $this->actions->addIncludes(${{modelVariable}});
+    }
+
+
+    public function update({{ updateRequest }} $request, {{ model }} ${{ modelVariable }})
+    {
+        return ${{ modelVariable }}->update($request->validated());
+    }
+
+    public function destroy({{ model }} ${{ modelVariable }})
+    {
+        return ${{ modelVariable }}->delete();
+    }
+}

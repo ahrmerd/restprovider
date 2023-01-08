@@ -1,0 +1,65 @@
+{
+    "attributes": [
+        {
+            "name": "user_id",
+            "related": "user:id",
+            "datatype": "int",
+            "default": "0",
+            "unique": false,
+            "nullable": false,
+            "fillable": false,
+            "sortable": true,
+            "filterable": "exact",
+            "other properties": [
+                ""
+            ],
+            "validation": "max:5|required"
+        },
+        {
+            "name": "title",
+            "datatype": "string",
+            "related": false,
+            "default": false,
+            "unique": true,
+            "nullable": false,
+            "fillable": true,
+            "sortable": true,
+            "filterable": "not",
+            "other properties": [
+                "test1",
+                "test2"
+            ],
+            "validation": "required|min:6"
+        },
+        {
+            "name": "body",
+            "datatype": "text",
+            "default": false,
+            "related": false,
+            "unique": false,
+            "nullable": true,
+            "fillable": true,
+            "sortable": false,
+            "filterable": false,
+            "other properties": [
+                ""
+            ],
+            "validation": "optional"
+        }
+    ],
+    "name": "Post",
+    "policy": {
+        "viewany": "g",
+        "view": "u",
+        "create": "u",
+        "update": "o",
+        "delete": "a"
+    },
+    "hasmany": [
+        "comments",
+        "image"
+    ],
+    "belongsto": [
+        "user"
+    ]
+}
