@@ -127,7 +127,7 @@ class RestProviderGeneratorCommand extends Command
     {
         $columns = array_map(function ($attribute) {
             $nullable = ($attribute['nullable'] ? ',nullable' : '');
-            $unique = ($attribute['unique'] ? ',unique,' : '');
+            $unique = ($attribute['unique'] ? ',unique' : '');
             $default = ($attribute['default'] ? ',default:' . $attribute['default'] : '');
             $references = ($attribute['related'] ? ',references:' . $attribute['related'] : '');
             $others = implode(',', $attribute['other properties']);
