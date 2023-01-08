@@ -79,10 +79,10 @@ class RestProviderGeneratorCommand extends Command
         $delete = $this->ask('delete');
         $this->data['policy'] = ['viewany' => $viewany, 'view' => $view, 'create' => $create, 'update' => $update, 'delete' => $delete];
 
-        $hasmany = explode(',', $this->ask('this resource has a oneTomany relationship with which model or resource. separate them using a string'));
-        $this->data['onetomany'] = $hasmany;
-        $belongsto = explode(',', $this->ask('this resource has a manyToOne relationship with which model or resource. separate them using a string'));
-        $this->data['manytone'] = $belongsto;
+        $hasmany = explode(',', $this->ask('this resource has a many relationship with which model or resource. separate them using a string'));
+        $this->data['hasmany'] = $hasmany;
+        $belongsto = explode(',', $this->ask('this resource has a belongs to relationship with which model or resource. separate them using a string'));
+        $this->data['belongsto'] = $belongsto;
     }
 
     public function askAttributeQuestions(array $attributes)
