@@ -2,12 +2,13 @@
     "name": "ahrmerd/restprovider",
     "description": "provide commands to easily develop rest api using laravel PHP framework",
     "require": {
+        "php": "^8.2",
         "spatie/laravel-query-builder": "^5.1"
     },
     "require-dev": {
         "orchestra/testbench": "^7.18"
     },
-    "license": "M",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Ahmed\\RestProvider\\": "src/"
@@ -20,6 +21,8 @@
             ]
         }
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "authors": [
         {
             "name": "Ahrmerd",
