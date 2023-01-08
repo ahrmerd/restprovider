@@ -1,5 +1,5 @@
 {
-    "name": "ahmed/restprovider",
+    "name": "ahrmerd/restprovider",
     "description": "provide commands to easily develop rest api using laravel PHP framework",
     "require": {
         "spatie/laravel-query-builder": "^5.1"
@@ -11,6 +11,13 @@
     "autoload": {
         "psr-4": {
             "Ahmed\\RestProvider\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ahmed\\RestProvider\\RestProviderServiceProvider"
+            ]
         }
     },
     "authors": [
