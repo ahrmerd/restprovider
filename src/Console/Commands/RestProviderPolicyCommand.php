@@ -8,7 +8,7 @@ use App\Models\User;
 use Str;
 use Symfony\Component\Console\Input\InputOption;
 
-class RestProviderPolicy extends GeneratorCommand
+class RestProviderPolicyCommand extends GeneratorCommand
 {
 
     protected $name = 'restprovider:policy';

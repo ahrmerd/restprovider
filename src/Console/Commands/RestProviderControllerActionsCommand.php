@@ -4,7 +4,7 @@ namespace Ahmed\RestProvider\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class RestProviderControllerActions extends Command
+class RestProviderControllerActionsCommand extends Command
 {
     /**
      * The name and signature of the console command.

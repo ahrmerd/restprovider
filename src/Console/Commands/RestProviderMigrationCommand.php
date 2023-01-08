@@ -10,7 +10,7 @@ use Illuminate\Support\Composer;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
-class RestProviderMigration extends BaseCommand
+class RestProviderMigrationCommand extends BaseCommand
 {
     /**
      * The name and signature of the console command.

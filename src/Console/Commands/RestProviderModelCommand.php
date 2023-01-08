@@ -7,7 +7,7 @@ use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
-class RestProviderModel extends GeneratorCommand
+class RestProviderModelCommand extends GeneratorCommand
 {
     /**
      * The name and signature of the console command.

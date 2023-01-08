@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;
 
-class RestProviderRequest extends GeneratorCommand
+class RestProviderRequestCommand extends GeneratorCommand
 {
     protected $name = 'restprovider:request';
 
