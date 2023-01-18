@@ -11,13 +11,13 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Ahmed\\RestProvider\\": "src/"
+            "Ahrmerd\\RestProvider\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Ahmed\\RestProvider\\RestProviderServiceProvider"
+                "Ahrmerd\\RestProvider\\RestProviderServiceProvider"
             ]
         }
     },

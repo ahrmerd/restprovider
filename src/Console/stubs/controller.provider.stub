@@ -6,7 +6,7 @@ use {{ namespacedModel }};
 use {{ rootNamespace }}Http\Controllers\Controller;
 use {{ namespacedRequests }}
 use Spatie\QueryBuilder\AllowedFilter;
-use App\Http\Actions\RestProviderControllerActions;
+use Ahrmerd\RestProvider\RestProviderControllerActions;
 
 class {{ class }} extends Controller
 {

@@ -1,8 +1,7 @@
 <?php
 
-namespace Ahmed\RestProvider\Console\Commands;
+namespace Ahrmerd\RestProvider\Console\Commands;
 
-use Illuminate\Console\Command;
 use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -76,7 +75,6 @@ class RestProviderControllerCommand extends GeneratorCommand
      */
     protected function buildClass($name)
     {
-        $this->generateActionClass();
         $controllerNamespace = $this->getNamespace($name);
 
         $replace = [];
@@ -101,11 +99,11 @@ class RestProviderControllerCommand extends GeneratorCommand
     //     }
     // }
 
-    protected function generateActionClass()
-    {
-        if (file_exists(app()->basePath() . "/app/Http/Actions/RestProviderControllerActions.php")) return;
-        $this->call('restprovider:controller-actions',);
-    }
+    // protected function generateActionClass()
+    // {
+    //     if (file_exists(app()->basePath() . "/app/Http/Actions/RestProviderControllerActions.php")) return;
+    //     $this->call('restprovider:controller-actions',);
+    // }
 
 
     /**

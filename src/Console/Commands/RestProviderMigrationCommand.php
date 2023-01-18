@@ -1,6 +1,6 @@
 <?php
 
-namespace Ahmed\RestProvider\Console\Commands;
+namespace Ahrmerd\RestProvider\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Database\Console\Migrations\BaseCommand;
@@ -153,7 +153,6 @@ class RestProviderMigrationCommand extends BaseCommand
         $attributes = explode(',', $column);
         $columnText = "\t \t \t";
         if (count($attributes) >= $attributeCount) {
-            dump($attributes);
             $name = array_shift($attributes);
             $datatype = array_shift($attributes);
             $columnText .= '$table->';
